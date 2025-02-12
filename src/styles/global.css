@@ -1,4 +1,9 @@
 @import "tailwindcss";
-#root {
-  font-family: "Roboto", sans-serif;
+
+@theme {
+  --font-family-sans: "Roboto", sans-serif;
+}
+
+html {
+  font-family: var(--font-family-sans);
 }
