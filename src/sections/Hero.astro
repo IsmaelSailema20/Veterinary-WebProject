@@ -1,0 +1,49 @@
+---
+import Button from "../components/Button.astro";
+import IconDescription from "../components/IconDescription.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+---
+
+<SectionContainer class="w-[1120px] h-fit m-auto py-16 px-4" id="inicio">
+  <div class="flex flex-row gap-12">
+    <div class="w-[60%] flex flex-col items-start gap-3 overflow-auto">
+      <div class="w-full flex flex-row items-center gap-10">
+        <img class="w-18 h-18" src="Icons/HuesoIcon.png" alt="icono hueso" />
+        <h1 class="text-4xl text-[#3EBB52] font-extrabold">
+          Cuidamos a tu mascota como se merece
+        </h1>
+      </div>
+
+      <p class="prose mb-7 py-2">
+        En nuestra clínica, el amor y la profesionalidad se unen para ofrecerle
+        a tu compañero peludo la atención que necesita. Con más de <span
+          class="font-extrabold">10 años</span
+        >
+        siendo la clínica de confianza en <span class="font-extrabold"
+          >Ambato</span
+        >, nos enorgullece ser parte de la vida de miles de mascotas y sus
+        familias.
+        <br /><span class="font-extrabold"
+          >Porque sabemos que ellos no son solo animales, son familia. ❤️</span
+        >
+      </p>
+      <Button href="#" text="Agenda una cita" id="agendarCitaHero" />
+      <div class="flex flex-row gap-6 mt-8">
+        <IconDescription
+          src="Icons/Icon-E911.png"
+          description="Servicio de emergencias disponible las 24 horas"
+          alt="icono de emergencia"
+        />
+        <IconDescription
+          src="Icons/CardiogramaIcon.png"
+          description="Instalaciones equipadas con alta tecnología"
+          alt="icono cardiograma"
+        />
+      </div>
+    </div>
+    <div>
+      <img class="absolute w-md ml-11" src="Logos/ImagenPrincipal.png" alt="" />
+      <img src="FiguraSeccionPrincipal.png" alt="" />
+    </div>
+  </div>
+</SectionContainer>
