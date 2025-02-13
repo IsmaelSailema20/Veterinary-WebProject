@@ -1,0 +1,10 @@
+---
+const { src, description, textAlt } = Astro.props;
+---
+
+<div class="flex flex-row items-center justify-center gap-2">
+  <img src={src} alt={textAlt} class="w-12 h-12" />
+  <p class="text-sm prose">
+    {description}
+  </p>
+</div>
