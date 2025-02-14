@@ -1,0 +1,31 @@
+---
+import CardServices from "../components/CardServices.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import { servicesData } from "../Data/ServicesData";
+---
+
+<SectionContainer class="w-[1120px] h-fit m-auto py-16 px-4" id="servicios">
+  <div class="text-center w-full">
+    <h1 class="text-4xl text-[#3EBB52] font-bold mb-4">
+      Conoce Nuestros Sevicios
+    </h1>
+    <span class="prose font-semibold text-base"
+      >Servicios que cuidan de ellos como tú lo harías 😽</span
+    >
+  </div>
+  <div class="grid grid-cols-2 gap-x-[182px] gap-y-[91px] align-middle p-16">
+    {
+      servicesData.map((service) => (
+        <CardServices
+          srcMainImage={service.srcMainImage}
+          alt={service.alt}
+          title={service.title}
+          srcIconTitle={service.srcIconTitle}
+          description={service.description}
+          altIconTitle={service.altIconTitle}
+          estimatedTime={service.estimatedTime}
+        />
+      ))
+    }
+  </div>
+</SectionContainer>

@@ -1,0 +1,30 @@
+---
+import Button from "./Button.astro";
+const {
+  srcMainImage,
+  alt,
+  title,
+  description,
+  srcIconTitle,
+  altIconTitle,
+  estimatedTime,
+} = Astro.props;
+const iconTime = "/Icons/TimeIcon.png";
+---
+
+<div class="w-[400px] h-fit">
+  <img class="rounded-2xl" src={srcMainImage} alt={alt} />
+  <div class="flex gap-4 flex-col mb-8 mt-6">
+    <span class="flex flex-row items-center gap-4">
+      <h4 class="text-[#3EBB52] font-bold text-2xl">{title}</h4>
+      <img src={srcIconTitle} alt={altIconTitle} />
+    </span>
+
+    <span class="flex flex-row items-center gap-4">
+      <img src={iconTime} alt="" />
+      <p class="prose text-xs font-normal">{estimatedTime}</p>
+    </span>
+    <p class="prose text-black font-normal text-base">{description}</p>
+  </div>
+  <Button href="" text="Más Información" />
+</div>
