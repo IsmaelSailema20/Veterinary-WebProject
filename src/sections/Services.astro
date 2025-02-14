@@ -1,0 +1,53 @@
+---
+import CardServices from "../components/CardServices.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+---
+
+<SectionContainer class="w-[1120px] h-fit m-auto py-16 px-4" id="servicios">
+  <div class="text-center w-full">
+    <h1 class="text-4xl text-[#3EBB52] font-bold mb-4">
+      Conoce Nuestros Sevicios
+    </h1>
+    <span class="prose font-semibold text-base"
+      >Servicios que cuidan de ellos como tú lo harías 😽</span
+    >
+  </div>
+  <div class="grid grid-cols-2 gap-x-[182px] gap-y-[91px] align-middle p-16">
+    <CardServices
+      srcMainImage="/VeterinaryServices/ConsultasYPrevencionImagen.webp"
+      alt="Veterinario cuidando a un gato"
+      title="Consultas y prevención"
+      srciconTitle="/Icons/Jeringilla.png"
+      description="Chequeos generales, vacunación, desparasitación y planes de prevención para mantener a tu mascota sana."
+      altIconTitle="Icono de jeringilla"
+      estimatedTime="20 - 60 minutos (dependiendo del servicio)."
+    />
+    <CardServices
+      srcMainImage="/VeterinaryServices/CirugiasImagen.webp"
+      alt="Imagen de veterinario preparando a un perro para cirugía"
+      title="Cirugías y procedimientos"
+      srciconTitle="/Icons/CamillaIcon.png"
+      description="Servicios quirúrgicos y procedimientos especializados, desde esterilización hasta cirugías menores."
+      altIconTitle="Icono de camilla"
+      estimatedTime="1 - 2 horas (dependiendo del procedimiento)."
+    />
+    <CardServices
+      srcMainImage="/VeterinaryServices/CuidadoDentalImagen.webp"
+      alt="Veterinario revisando la boca de un gato"
+      title="Odontología veterinaria"
+      srciconTitle="/Icons/OdontologiaGatoIcon.png"
+      description="Cuidado dental profesional para prevenir enfermedades bucales y mantener una sonrisa saludable en tu mascota."
+      altIconTitle="Icono de odontología en animales"
+      estimatedTime="45 - 60 minutos."
+    />
+    <CardServices
+      srcMainImage="/VeterinaryServices/PeluqueriaParaMascotas.webp"
+      alt="Veterinario peinando a un perro"
+      title="Peluquería y estética"
+      srciconTitle="/Icons/PerroPeinadoIcon.png"
+      description="Servicios de belleza y cuidado para que tu mascota luzca y se sienta bien."
+      altIconTitle="Icono de un perro peinado"
+      estimatedTime="1 - 2 horas (dependiendo del tamaño y tipo de mascota)."
+    />
+  </div>
+</SectionContainer>
