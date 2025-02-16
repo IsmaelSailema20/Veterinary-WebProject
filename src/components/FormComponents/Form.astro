@@ -1,0 +1,49 @@
+---
+import Input from "./Input.astro";
+import Textarea from "./TextArea.astro";
+import SubmitButton from "./SubmitButton.astro";
+import InputTelefono from "./InputTelefono.astro";
+---
+
+<div
+  class="relative w-1/2 p-8 border-2 rounded-2xl border-[#D9D9D9] shadow-2xl"
+>
+  <!-- Imagen en la esquina superior derecha -->
+  <img
+    src="/Icons/IconoFormulario.png"
+    alt="Imagen de formulario"
+    class="absolute top-[-30px] right-0 w-14 h-14"
+  />
+
+  <!-- Título y descripción -->
+  <h1 class="text-3xl font-semibold text-gray-950 mb-5">Déjanos un mensaje</h1>
+  <h4 class="text-base prose mb-5">Te contactaremos a la brevedad.</h4>
+
+  <!-- Formulario -->
+  <form action="" class="flex flex-col space-y-4">
+    <Input
+      label="Nombre y apellido"
+      type="text"
+      id="nombre"
+      name="nombre"
+      placeholder="Juan Perez"
+    />
+    <Input
+      label="Correo electrónico"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="ejemplo@gmail.com"
+    />
+
+    <InputTelefono
+      label="Número de teléfono"
+      type="tel"
+      id="telefono"
+      name="telefono"
+      placeholder="0987654321"
+    />
+    <Textarea label="Mensaje" id="mensaje" name="mensaje" rows="5" />
+    <SubmitButton type="submit" text="Enviar Mensaje" />
+  </form>
+</div>
