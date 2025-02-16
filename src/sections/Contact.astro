@@ -1,0 +1,117 @@
+---
+import Form from "../components/FormComponents/Form.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+---
+
+<SectionContainer class="w-[1120px] h-fit m-auto py-16 px-4" id="contactanos">
+  <div class="text-center w-full">
+    <h1 class="text-4xl text-[#3EBB52] font-bold mb-4">
+      Contáctate Con Nosotros
+    </h1>
+    <span class="prose font-semibold text-base"
+      >¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para
+      ayudarte!</span
+    >
+  </div>
+  <div class="w-full mt-12 flex flex-row gap-8">
+    <Form />
+    <div class="w-1/2 flex flex-col gap-6">
+      <!-- Horarios-->
+      <div
+        class="w-full h-fit p-6 border-2 rounded-2xl border-[#D9D9D9] shadow-lg"
+      >
+        <span
+          class="flex flex-row gap-4 items-center text-2xl font-bold text-[#39C748] mb-2"
+        >
+          <h2>Nuestros Horarios</h2>
+          <img
+            src="Icons/CalendarioIcon.png"
+            alt="Icono de Calendario"
+            class="w-8 h-8"
+          />
+        </span>
+        <div class="flex flex-row gap-10">
+          <div class="w-full text-base prose">
+            <h4 class="text-[#36A446]">Lunes a Viernes:</h4>
+            <p class="font-semibold">
+              08:00am - 13:00pm
+              <br />
+              14:00pm - 18:00pm
+            </p>
+            <h4 class="text-[#36A446]">Sábados y Domingos</h4>
+            <p class="font-semibold">09:00am - 13:00pm</p>
+          </div>
+          <span
+            class="w-full flex flex-row items-center justify-center gap-4 text-[] font-semibold"
+          >
+            <p>En casos de emergencia la atención es 24h todos los días.</p>
+            <img src="Icons/SirenaIcon.png" alt="Icono de sirena" />
+          </span>
+        </div>
+      </div>
+      <!-- Ubicación-->
+      <div
+        class="w-full h-fit p-6 border-2 rounded-2xl border-[#D9D9D9] shadow-lg"
+      >
+        <span
+          class="flex flex-row gap-4 items-center text-2xl font-bold text-[#39C748] mb-2"
+        >
+          <h2>Nuestra Ubicación</h2>
+          <img
+            src="Icons/UbicacionIcon.png"
+            alt="Icono de ubicación"
+            class="w-8 h-8"
+          />
+        </span>
+        <p class="prose text-center">
+          <strong>Calle Principal:</strong> Av De Ejemplo
+          <br />
+          <strong>Calle Secundaria:</strong> Intersección de Ejemplo
+          <br />
+        </p>
+        <a href="#" class="prose w-full inline-flex justify-center text-lg"
+          ><strong>Encuéntranos aquí en Google Maps</strong></a
+        >
+      </div>
+      <!-- Redes sociales -->
+      <div
+        class="w-full h-fit p-6 border-2 rounded-2xl border-[#D9D9D9] shadow-lg"
+      >
+        <span
+          class="flex flex-row gap-4 items-center text-2xl font-bold text-[#39C748] mb-2"
+        >
+          <h2>Nuestras Redes</h2>
+
+          <img
+            src="Icons/RedesIcon.png"
+            alt="Icono de redes sociales"
+            class="w-8 h-8"
+          />
+        </span>
+        <div class="flex flex-row gap-12 justify-center">
+          <a
+            href="#"
+            class="flex flex-col items-center hover:scale-110 transition duration-300"
+          >
+            <img src="Icons/WhatsappIcon.png" alt="" class="w-12 h-12" />
+            <strong>+593 123456789</strong>
+          </a>
+          <a
+            href="#"
+            class="flex flex-col items-center hover:scale-110 transition duration-300"
+          >
+            <img src="Icons/InstagramIcon.png" alt="" class="w-12 h-12" />
+            <strong>@usuario</strong>
+          </a>
+          <a
+            href="#"
+            class="flex flex-col items-center hover:scale-110 transition duration-300"
+          >
+            <img src="Icons/FacebookIcon.png" alt="" class="w-12 h-12" />
+            <strong>VetExample</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</SectionContainer>
