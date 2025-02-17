@@ -1,0 +1,23 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import Carousel from "../components/Carousel.tsx";
+---
+
+<SectionContainer
+  class="w-[1120px] h-fit m-auto py-16 px-4"
+  id="nuestro_equipo"
+>
+  <div class="text-center w-full">
+    <h1 class="text-4xl text-[#3EBB52] font-bold mb-4">
+      Conoce a nuestro equipo
+    </h1>
+    <span class="prose font-semibold text-base">
+      Profesionales apasionados por el bienestar de tu mascota. En nuestra
+      clínica, contamos con un equipo de expertos dedicados a brindar el mejor
+      cuidado y atención a tus compañeros peludos 🐾
+    </span>
+  </div>
+
+  <!-- Componente del Carrusel -->
+  <Carousel client:load />
+</SectionContainer>
