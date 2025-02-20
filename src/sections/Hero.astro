@@ -4,22 +4,29 @@ import IconDescription from "../components/IconDescription.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<SectionContainer class="w-[1120px] h-fit m-auto py-26 px-4" id="inicio">
-  <div class="flex flex-row gap-12 mt-12">
-    <div class="w-[60%] flex flex-col items-start gap-3 overflow-auto">
-      <div class="w-full flex flex-row items-center gap-10">
+<SectionContainer
+  class="lg:w-[1120px] h-fit m-auto py-26 px-4 w-full"
+  id="inicio"
+>
+  <div class="lg:flex lg:flex-row lg:gap-12 lg:mt-12 flex flex-col gap-4">
+    <div
+      class="lg:w-[60%] lg:flex lg:flex-col lg:items-start lg:gap-3 lg:overflow-auto order-2 flex flex-col items-center gap-6"
+    >
+      <div
+        class="w-full flex flex-row items-center lg:gap-10 gap-4 justify-center lg:justify-start mt-4 lg:mt-0"
+      >
         <img
-          class="w-20 h-20"
+          class="lg:w-20 lg:h-20 w-14 h-14"
           src="Logos/veterinarioPrincipal.png"
           alt="icono del un veterinario"
         />
 
-        <h1 class="text-4xl text-[#3EBB52] font-extrabold">
+        <h1 class="lg:text-4xl text-[#3EBB52] font-extrabold text-2xl order-1">
           Cuidamos a tu mascota como se merece
         </h1>
       </div>
 
-      <p class="prose mb-7 py-2">
+      <p class="prose lg:mb-7 mb-0 lg:py-2 py-0">
         En nuestra clínica, el amor y la profesionalidad se unen para ofrecerle
         a tu compañero peludo la atención que necesita. Con más de <span
           class="font-extrabold">10 años</span
@@ -32,8 +39,13 @@ import SectionContainer from "../components/SectionContainer.astro";
           >Porque sabemos que ellos no son solo animales, son familia. ❤️</span
         >
       </p>
-      <Button href="#" text="Agenda una cita" id="agendarCitaHero" />
-      <div class="flex flex-row gap-6 mt-8">
+      <div class="order-3 lg:order-2">
+        <Button href="#" text="Agenda una cita" id="agendarCitaHero" />
+      </div>
+
+      <div
+        class="flex flex-col items-start lg:flex-row gap-6 lg:mt-8 mt-0 lg:order-3 order-2 lg:p-0"
+      >
         <IconDescription
           src="Icons/Icon-E911.png"
           description="Servicio de emergencias disponible las 24 horas"
@@ -46,9 +58,17 @@ import SectionContainer from "../components/SectionContainer.astro";
         />
       </div>
     </div>
-    <div>
-      <img class="absolute w-md ml-11" src="Logos/ImagenPrincipal.png" alt="" />
-      <img src="FiguraSeccionPrincipal.png" alt="" />
+    <div class="lg:order-2 order-4 flex items-center justify-center">
+      <img
+        class="lg:absolute lg:w-md lg:ml-11 absolute w-xs"
+        src="Logos/ImagenPrincipal.png"
+        alt=""
+      />
+      <img
+        class="lg:w-2xl w-xs"
+        src="FiguraSeccionPrincipal.png"
+        alt="figura de la seccion principal"
+      />
     </div>
   </div>
 </SectionContainer>
