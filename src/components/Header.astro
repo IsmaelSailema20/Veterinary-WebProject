@@ -1,0 +1,164 @@
+---
+import Button from "./Button.astro";
+---
+
+<header class="w-full fixed z-20 bg-[#fff]">
+  <div class="m-auto p-4 h-[88px] max-w-[1120px]">
+    <div class="flex flex-row justify-between items-center">
+      <!-- Logo y eslogan -->
+      <a
+        class="hover:cursor-pointer lg:w-72 flex flex-row lg:overflow-auto items-center gap-2"
+        href="#top"
+      >
+        <img
+          src="Logos/ImagenLogo.webp"
+          alt="Logo de la veterinaria"
+          class="h-14 w-14"
+        />
+        <h3 class="text-base font-semibold">Eslogan</h3>
+      </a>
+
+      <!-- Menú de navegación (reutilizado para desktop y móvil) -->
+      <!-- Menú de navegación (reutilizado para desktop y móvil) -->
+      <nav
+        id="mainMenu"
+        class="flex lg:items-center lg:w-full lg:justify-between lg:gap-8 text-sm font-medium fixed lg:static inset-0 lg:bg-transparent transform lg:transform-none translate-x-full lg:translate-x-0 transition-transform duration-300 z-50"
+      >
+        <!-- Enlaces del menú -->
+        <div
+          class="bg-white w-[60%] lg:w-auto lg:flex-grow flex flex-col lg:flex-row lg:justify-center gap-4 lg:gap-20 mt-0 lg:mt-0 p-4 lg:p-0"
+        >
+          <a
+            class="hover-underline-animation hover:text-gray-700 max-lg:border-b max-lg:border-gray-300 max-lg:py-3 max-lg:px-3"
+            href="#top">Inicio</a
+          >
+          <a
+            class="hover-underline-animation hover:text-gray-700 max-lg:border-b max-lg:border-gray-300 max-lg:py-3 max-lg:px-3"
+            href="#servicios">Servicios</a
+          >
+          <a
+            class="hover-underline-animation hover:text-gray-700 max-lg:border-b max-lg:border-gray-300 max-lg:py-3 max-lg:px-3"
+            href="#contactanos">Contáctanos</a
+          >
+          <a
+            class="hover-underline-animation hover:text-gray-700 max-lg:border-b max-lg:border-gray-300 max-lg:py-3 max-lg:px-3"
+            href="#nuestro_equipo">Nuestro Equipo</a
+          >
+          <!-- Botón de Agendar Cita (visible en móvil) -->
+          <div class="lg:hidden mt-8 p-4">
+            <Button href={""} text="Agendar Cita" />
+          </div>
+        </div>
+
+        <!-- Fondo oscuro en móvil -->
+        <div class="bg-black opacity-80 w-[40%] lg:hidden">
+          <!-- Botón para cerrar el menú en móvil -->
+          <button
+            id="closeMenu"
+            class="bg-white opacity-100 rounded-2xl lg:hidden absolute top-4 right-4 p-2 focus:outline-none z-50"
+            aria-label="Cerrar menú"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Botón de Agendar Cita (visible en desktop) -->
+      <div class="hidden lg:block">
+        <Button href={""} text="Agendar Cita" />
+      </div>
+
+      <!-- Ícono de hamburguesa (visible en móvil) -->
+      <button
+        id="toggleMenu"
+        class="lg:hidden p-2 focus:outline-none"
+        aria-label="Abrir menú"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Estilos para la animación del subrayado -->
+  <style>
+    .hover-underline-animation {
+      display: inline-block;
+      position: relative;
+    }
+
+    .hover-underline-animation::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #36a446;
+      transform-origin: bottom right;
+      transition: transform 0.33s ease-out;
+    }
+
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  </style>
+</header>
+<script>
+  // Obtener elementos con verificación de nulidad
+  const toggleMenu = document.getElementById("toggleMenu");
+  const closeMenu = document.getElementById("closeMenu");
+  const mainMenu = document.getElementById("mainMenu");
+
+  // Abrir el menú (Verificación de nulidad antes de agregar eventos)
+  if (toggleMenu && mainMenu) {
+    toggleMenu.addEventListener("click", () => {
+      mainMenu.classList.remove("translate-x-full");
+      mainMenu.classList.add("translate-x-0");
+    });
+  }
+
+  // Cerrar el menú
+  if (closeMenu && mainMenu) {
+    closeMenu.addEventListener("click", () => {
+      mainMenu.classList.remove("translate-x-0");
+      mainMenu.classList.add("translate-x-full");
+    });
+  }
+
+  // Cerrar el menú al hacer clic en un enlace (opcional)
+  if (mainMenu) {
+    const menuLinks = mainMenu.querySelectorAll("a");
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mainMenu.classList.remove("translate-x-0");
+        mainMenu.classList.add("translate-x-full");
+      });
+    });
+  }
+</script>

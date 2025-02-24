@@ -1,1 +1,11 @@
+@config "./tailwind.config.js";
 @import "tailwindcss";
+
+@theme {
+  --font-family-sans: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family-sans);
+}
